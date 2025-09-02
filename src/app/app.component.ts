@@ -9,4 +9,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-course';
+
+onCongratsClick(){
+  alert('hello world');
+}
+
+onKeyUp(newTitle : string){
+  this.title = newTitle;
+}
+
 }
