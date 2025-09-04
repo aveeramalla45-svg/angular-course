@@ -326,12 +326,20 @@
     #titleInput
   />
 
+  @for (course of courses; track course.id; let index = $index; let count =
+  $count; let first = $first; let last = $last; let even = $even; ) {
   <app-course-card
     (courseSelected)="onCourseSelected($event)"
-    [course]="coreCourse"
-  ></app-course-card>
-  <app-course-card [course]="rxjsCourse"></app-course-card>
-  <app-course-card [course]="ngrxCourse"></app-course-card>
+    [course]="course"
+    [indexDisplay]="index"
+    [class.is-first]="first"
+    [class.is-last]="last"
+    [class.is-even]="even"
+    [class.is-odd]="$odd"
+  />
+  } @empty {
+  <h1>No courses found</h1>
+  }
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

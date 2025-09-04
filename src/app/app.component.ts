@@ -21,6 +21,8 @@ onKeyUp(newTitle : string){
   this.title = newTitle;
 }
 
+courses = COURSES;
+
 coreCourse = COURSES[0];
 rxjsCourse = COURSES[1];
 ngrxCourse = COURSES[2];

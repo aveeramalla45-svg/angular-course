@@ -12,6 +12,9 @@ export class CourseCardComponent {
   title!: string;
 
   @Input()
+  indexDisplay!: number;
+
+  @Input()
   course!: Course;
 
   @Output('courseSelected')
