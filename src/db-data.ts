@@ -2,6 +2,7 @@
 
 export const COURSES: any = [
 
+    
     {
         id: 1,
         description: "Angular Core Deep Dive",
@@ -18,7 +19,7 @@ export const COURSES: any = [
         category: 'BEGINNER',
         lessonsCount: 10
     },
-
+undefined,
     {
         id: 3,
         description: 'NgRx In Depth',
@@ -30,7 +31,7 @@ export const COURSES: any = [
     {
         id: 4,
         description: "Angular for Beginners",
-        iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
+        //iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
         longDescription: "Establish a solid layer of fundamentals, learn what's under the hood of Angular",
         category: 'BEGINNER',
         lessonsCount: 10
@@ -39,7 +40,7 @@ export const COURSES: any = [
         id: 5,
         description: 'Angular Security Course',
         longDescription: "Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.",
-        iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
+        //iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
         category: 'ADVANCED',
         lessonsCount: 11
     },

@@ -326,8 +326,10 @@
     #titleInput
   />
 
-  @for (course of courses; track course.id; let index = $index; let count =
-  $count; let first = $first; let last = $last; let even = $even; ) {
+  <!--
+  @for (course of courses; track trackCourse($index,course); let index = $index;
+  let count = $count; let first = $first; let last = $last; let even = $even; )
+  {
   <app-course-card
     (courseSelected)="onCourseSelected($event)"
     [course]="course"
@@ -340,6 +342,15 @@
   } @empty {
   <h1>No courses found</h1>
   }
+-->
+
+  <app-course-card
+    *ngFor="let course of courses; index as i; last as isLast"
+    (courseSelected)="onCourseSelected($event)"
+    [course]="course"
+    [indexDisplay]="i"
+    [class.is-last]="isLast"
+  ></app-course-card>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { CourseCardComponent } from "./course-card/course-card.component";
 import {COURSES} from '../db-data';
 import { Course } from './model/course';
+  import { NgModule } from '@angular/core';
+   import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CourseCardComponent],
+  imports: [RouterOutlet, CourseCardComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -29,6 +31,10 @@ ngrxCourse = COURSES[2];
 
 onCourseSelected(course:Course){
     console.log("app component - click event bubbled...", course);
+}
+
+trackCourse(index:number, course:Course){
+  return course.id;
 }
 
 }
